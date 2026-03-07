@@ -1,57 +1,51 @@
-🚀 **Reinforcement Learning-Based Workflow Scheduling**
+# Reinforcement Learning-Based Workflow Scheduling
 
-This project implements intelligent workflow scheduling in a cloud computing environment using Q-Learning and Deep Q-Network (DQN). The system is built using CloudSim for simulation and Python (TensorFlow/Keras) for reinforcement learning implementation.
+This project implements intelligent workflow scheduling within a cloud computing environment using advanced Deep Reinforcement Learning (DRL). It leverages **Q-Learning** and **Deep Q-Network (DQN)** agents to dynamically allocate incoming tasks to virtual machines, optimizing performance metrics in real-time.
 
-📌 **Objective**
+<img width="1408" height="768" alt="image" src="https://github.com/user-attachments/assets/44ce8d18-87bf-40cb-85a8-3fba0816b3d8" />
 
-To optimize task-to-VM allocation in cloud environments by minimizing execution time, reducing resource cost, and improving overall efficiency compared to traditional scheduling algorithms.
 
-🧠 **Approach**
+## 📌 Objective
 
-a. Designed RL agents to dynamically select the best VM for incoming tasks.
+To optimize task-to-VM allocation in heterogeneous cloud environments. The main goals are minimizing overall execution time (makespan), reducing operational resource cost, and improving overall energy efficiency, particularly when compared to traditional, static scheduling algorithms.
 
-b. Defined state space using VM utilization, task length, and resource availability.
+## 🛠️ Tech Stack
 
-c. Designed reward function based on execution time, cost, and energy efficiency.
+* **Simulation Environment:** CloudSim
+* **AI Frameworks:** Python, TensorFlow / Keras
+* **Data Processing:** NumPy
+* **Visualization:** Matplotlib
 
-d. Compared performance with:
+## 🧠 Approach
 
-   1. Round Robin
-    
-   2. Min-Min
-    
-   3.  Max-Min
+1.  **Agent Design:** Developed RL agents (Q-Learning and DQN) to learn optimal VM selection policies for diverse task workloads.
+2.  **State Space Definition:** Defined the environment state using real-time factors including VM utilization (CPU/Memory load), incoming task length, and current resource availability.
+3.  **Reward Function:** Designed a complex reward function that balances competing objectives: execution time reduction, resource cost management, and energy consumption efficiency.
+4.  **Baseline Comparison:** Evaluated performance against standard scheduling benchmarks:
+    * Round Robin (RR)
+    * Min-Min (Smallest task first)
+    * Max-Min (Largest task first)
 
-📊 **Results**
+## 📊 Results & Performance
 
-⬆️ 25% improvement in task execution efficiency
+* **25% Improvement** in task execution efficiency.
+* **20% Reduction** in overall workflow time (makespan).
+* **15% Reduction** in resource cost.
+* Improved system throughput and energy efficiency over all baseline algorithms.
 
-⬇️ 20% reduction in overall workflow time (makespan)
+**Key Technical Finding:** The **DQN** agent demonstrated superior scalability and robustness, outperforming tabular Q-Learning in large-scale, highly dynamic, and complex simulated environments.
 
-⬇️ 15% reduction in resource cost
+## 🧪 Experimental Analysis
 
-Improved throughput and energy efficiency over baseline algorithms
+The project was tested extensively under the following conditions:
+* **Variable Workloads:** Varying sizes, arrival rates, and task characteristics.
+* **Heterogeneous Clouds:** Simulated cloud environments with diverse VM configurations (CPU speed, memory size).
+* **Key Evaluated Metrics:**
+    * Makespan
+    * Throughput
+    * Energy Consumption
+    * Resource Utilization
+    * Cost Efficiency
 
-⚙️ **Tech Stack**
-
-CloudSim, Python, TensorFlow / Keras, NumPy, Matplotlib
-
-🧪 **Experimental Results**
-
-Tested under varying workload sizes
-
-Simulated heterogeneous cloud environments
-
-Evaluated metrics:
-
-      1. Makespan
-      
-      2. Throughput
-      
-      3. Energy consumption
-      
-      4. Resource utilization
-      
-      5. Cost efficiency
-
-**DQN showed superior performance in large-scale and highly dynamic environments compared to tabular Q-Learning.**
+## Author
+Yash Yadav
